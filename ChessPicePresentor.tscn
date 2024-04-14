@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccyq7qjgvrkmt"]
+
+[ext_resource type="PackedScene" uid="uid://c0xq0jxsqcrgx" path="res://ChessPieces/Pawn.dae" id="1_p72m8"]
+[ext_resource type="Material" uid="uid://bo1fhcad3gavu" path="res://ChessPieces/Material_White.tres" id="2_15o0r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Pawn White" parent="." instance=ExtResource("1_p72m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Sphere" parent="Pawn White" index="0"]
+material_override = ExtResource("2_15o0r")
+
+[node name="Pawn Black" parent="." instance=ExtResource("1_p72m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[editable path="Pawn White"]

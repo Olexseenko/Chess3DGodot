@@ -1,0 +1,41 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c0xq0jxsqcrgx"
+path="res://.godot/imported/Pawn.dae-548d6591641c7f54de8352b7b915157a.scn"
+
+[deps]
+
+source_file="res://ChessPieces/Pawn.dae"
+dest_files=["res://.godot/imported/Pawn.dae-548d6591641c7f54de8352b7b915157a.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Material_Black": {
+"use_external/enabled": true,
+"use_external/path": "res://ChessPieces/Material_Black.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=0
