@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 4.1.0 commit date:2024-03-25, commit time:20:42, hash:40a5e739e270</authoring_tool>
     </contributor>
-    <created>2024-03-30T20:28:50</created>
-    <modified>2024-03-30T20:28:50</modified>
+    <created>2024-04-14T13:10:42</created>
+    <modified>2024-04-14T13:10:42</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -67,31 +67,7 @@
       </extra>
     </light>
   </library_lights>
-  <library_effects>
-    <effect id="Material_Black-effect">
-      <profile_COMMON>
-        <technique sid="common">
-          <lambert>
-            <emission>
-              <color sid="emission">0 0 0 1</color>
-            </emission>
-            <diffuse>
-              <color sid="diffuse">0 0 0 1</color>
-            </diffuse>
-            <index_of_refraction>
-              <float sid="ior">1.5</float>
-            </index_of_refraction>
-          </lambert>
-        </technique>
-      </profile_COMMON>
-    </effect>
-  </library_effects>
   <library_images/>
-  <library_materials>
-    <material id="Material_Black-material" name="Material_Black">
-      <instance_effect url="#Material_Black-effect"/>
-    </material>
-  </library_materials>
   <library_geometries>
     <geometry id="Sphere-mesh" name="Sphere">
       <mesh>
@@ -127,7 +103,7 @@
         <vertices id="Sphere-mesh-vertices">
           <input semantic="POSITION" source="#Sphere-mesh-positions"/>
         </vertices>
-        <triangles material="Material_Black-material" count="1022">
+        <triangles count="1022">
           <input semantic="VERTEX" source="#Sphere-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Sphere-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Sphere-mesh-map-0" offset="2" set="0"/>
@@ -139,16 +115,8 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Sphere" name="Sphere" type="NODE">
-        <matrix sid="transform">0.5796639 0 0 0 0 0.5796639 0 0 0 0 0.5796639 1.199948 0 0 0 1</matrix>
-        <instance_geometry url="#Sphere-mesh" name="Sphere">
-          <bind_material>
-            <technique_common>
-              <instance_material symbol="Material_Black-material" target="#Material_Black-material">
-                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
-            </technique_common>
-          </bind_material>
-        </instance_geometry>
+        <matrix sid="transform">0.5796639 0 0 0 0 0.5796639 0 0 0 0 0.5796639 0 0 0 0 1</matrix>
+        <instance_geometry url="#Sphere-mesh" name="Sphere"/>
       </node>
       <node id="Camera-noimp" name="Camera-noimp" type="NODE">
         <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
